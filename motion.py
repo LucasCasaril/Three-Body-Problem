@@ -8,6 +8,7 @@ def dydt(y, t):
      G = 6.67259e-20 #Universal Gravitational Constant (km^3/kg/s^2)
 
      #Input Data: 
+
      m1 = 1e26 # First Body's Mass - kg
      m2 = 1e24 # Second Body's Mass - kg
      m3 = 1e5 # Second Body's Mass - kg
