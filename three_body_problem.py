@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import animation
 from motion import dydt
+from rkf_method import rkf_integration
 
 G = 6.67259e-20 #Universal Gravitational Constant (km^3/kg/s^2)
 t0 = 0
@@ -41,8 +42,11 @@ y0 = np.concatenate((R1_0, R2_0, R3_0, V1_0, V2_0, V3_0), axis=None)
 
 # Calling the Numerical Integration Solver (Runge-Kutta-Fehlberg)
 
-t = np.linspace(t0, tf, lenght)
-y_result = odeint(dydt, y0, t) # Need to change the calling "def dydt(y, t):""
+#t = np.linspace(t0, tf, lenght)
+#y_result = odeint(dydt, y0, t) # Need to change the calling "def dydt(y, t):""
+
+y_result = rkf_integration(dydt, t0, tf, y0, G, m1, m2, m3, tol, h)
+y_result = np.array(y_result)
 
 X1 = y_result[:, 0]
 Y1 = y_result[:, 1]
