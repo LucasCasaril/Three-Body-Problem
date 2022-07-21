@@ -2,16 +2,16 @@ import numpy as np
 from numpy.linalg import norm 
 
 
-#def dydt(t,y, G, m1, m2, m3):
-def dydt(y, t):
+def dydt(t,y, G, m1, m2, m3):
+#def dydt(y, t):
 
-     G = 6.67259e-20 #Universal Gravitational Constant (km^3/kg/s^2)
+     #G = 6.67259e-20 #Universal Gravitational Constant (km^3/kg/s^2)
 
      #Input Data: 
 
-     m1 = 1e26 # First Body's Mass - kg
-     m2 = 1e24 # Second Body's Mass - kg
-     m3 = 1e5 # Second Body's Mass - kg
+     #m1 = 1e26 # First Body's Mass - kg
+     #m2 = 1e26 # Second Body's Mass - kg
+     #m3 = 1e26 # Second Body's Mass - kg
 
      R1 = [y[0], y[1], y[2]]
      R2 = [y[3], y[4], y[5]]
