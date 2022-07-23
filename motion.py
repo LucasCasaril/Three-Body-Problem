@@ -1,6 +1,5 @@
 import numpy as np
-from numpy.linalg import norm 
-
+from numpy.linalg import norm
 
 def dydt(t,y, G, m1, m2, m3):
 #def dydt(y, t): #For the use of the odeint integrator
